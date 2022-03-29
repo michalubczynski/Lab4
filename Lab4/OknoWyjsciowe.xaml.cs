@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Geometria;
 namespace Lab4
 {
 
@@ -29,7 +30,13 @@ namespace Lab4
             InitializeComponent();
             this.lblObwod.Content = s;
         }
+        public OknoWyjsciowe(List<object> b)
+        {
+            InitializeComponent();
+            foreach (var o in b) { lstBox.DodajDoListy(o);  }
 
+        }
+         
         private void btnZamyka_Click(object sender, RoutedEventArgs e)
         {
             Close();

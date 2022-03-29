@@ -34,15 +34,17 @@ namespace Lab4
 
         private void btnKoniec_Click(object sender, RoutedEventArgs e)
         {
-            if (double.Parse(txtSzer.Text) < 0) { MessageBox.Show("Bledna wartosc szerokosci "); }
-            else if (double.Parse(txtWysokosc.Text) < 0) { MessageBox.Show("Bledna wartosc wysokosci "); }
-            else
-            {
-                double wysokosc = Wysokosc;
-                double szerokosc = Szerokosc;
-                var Okno = new OknoWyjsciowe(szerokosc, wysokosc);
+            Student student = new Student("majkel","dzordan");
+            List<object> l= new List<object>();
+            Kula kula = new Kula("Kuleczka",10,20,30);
+            Stozek st2 = new Stozek("St",21,31,41,51);
+            l.Add(kula);
+            l.Add(st2);
+            l.Add(student);
+            MessageBox.Show(student.PobierzIdentyfikator());
+                var Okno = new OknoWyjsciowe(l);
                 Okno.ShowDialog();
-            }
+            
         }
 
         private void btnStozek_Click(object sender, RoutedEventArgs e)

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnOblicz" Content="Button" HorizontalAlignment="Left" Margin="473,331,0,0" VerticalAlignment="Top" Click="btnOblicz_Click"/>
-        <Button x:Name="btnKula" Content="KULA" HorizontalAlignment="Left" Margin="623,196,0,0" VerticalAlignment="Top" Click="btnKula_Click"/>
-        <Button x:Name="btnStozek" Content="Stozek" HorizontalAlignment="Left" Margin="220,196,0,0" VerticalAlignment="Top" Click="btnStozek_Click"/>
+        <Button x:Name="btnOblicz" Content="Button" HorizontalAlignment="Left" Margin="427,331,0,0" VerticalAlignment="Top" Click="btnOblicz_Click"/>
+        <Button x:Name="btnKula" Content="KULA" HorizontalAlignment="Left" Margin="650,181,0,0" VerticalAlignment="Top" Click="btnKula_Click"/>
+        <Button x:Name="btnStozek" Content="Stozek" HorizontalAlignment="Left" Margin="216,186,0,0" VerticalAlignment="Top" Click="btnStozek_Click"/>
 
     </Grid>
 </Window>

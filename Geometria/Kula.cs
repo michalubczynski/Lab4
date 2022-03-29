@@ -16,5 +16,7 @@ namespace Geometria
         {
             Promien = promien;
         }
+        public override string PobierzIdentyfikator() { return base.PobierzIdentyfikator()+Promien; }
+
     }
 }
