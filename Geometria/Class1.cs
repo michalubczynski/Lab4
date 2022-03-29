@@ -14,24 +14,19 @@ namespace Geometria
         public string Nazwa { get { return nazwa; } private set { nazwa = value; } }
         public double Gestosc { get { return gestosc; }private set { gestosc = value; } }
         public decimal CenaZaKg { get { return cenaZaKg; }private set { cenaZaKg = value; } }
-
-
-        public abstract double ObliczObjetosc();
-        public virtual double ObliczMase()
-        {
-         return 0.0;   
-        }
-        public decimal ObliczCene() 
-        {
-        return (decimal)ObliczMase() * CenaZaKg;
-        }
+        public virtual double ObliczonaMasa { get => ObliczonaObjetosc*Gestosc; }
+        public virtual decimal FinalnaCena { get { return (decimal)this.ObliczonaMasa * this.CenaZaKg; } }
+        public abstract double ObliczonaObjetosc { get; }
+        //public abstract double ObliczObjetosc();
+        //public virtual double ObliczMase(){return 0.0;   }
+        //public decimal ObliczCene() {return (decimal)ObliczMase() * CenaZaKg;}
         public Bryla(string n, double g, decimal c) {
             Nazwa= n;
             Gestosc= g;
             CenaZaKg = c;
         }
         public override string ToString() { 
-        return $"{Nazwa}: Gestosc:{Gestosc}, Cena/Kg:{CenaZaKg} m:{ObliczMase()} Cena:{ObliczCene()} V:{ObliczObjetosc()}";
+        return $"{Nazwa}: Gestosc:{Gestosc}, Cena/Kg:{CenaZaKg} m:{ObliczonaMasa} Cena:{FinalnaCena} V:{ObliczonaObjetosc}";
         }
 
     }

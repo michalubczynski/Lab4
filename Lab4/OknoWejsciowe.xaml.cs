@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 using Geometria;
 namespace Lab4
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoWejsciowe.xaml
-    /// </summary>
+
     public partial class OknoWejsciowe : Window
     {
         public OknoWejsciowe()
@@ -36,27 +34,41 @@ namespace Lab4
 
         private void btnKoniec_Click(object sender, RoutedEventArgs e)
         {
-            double wysokosc = Wysokosc;
-            double szerokosc = Szerokosc;
-            var Okno = new OknoWyjsciowe(szerokosc,wysokosc);
-            Okno.ShowDialog();
+            if (double.Parse(txtSzer.Text) < 0) { MessageBox.Show("Bledna wartosc szerokosci "); }
+            else if (double.Parse(txtWysokosc.Text) < 0) { MessageBox.Show("Bledna wartosc wysokosci "); }
+            else
+            {
+                double wysokosc = Wysokosc;
+                double szerokosc = Szerokosc;
+                var Okno = new OknoWyjsciowe(szerokosc, wysokosc);
+                Okno.ShowDialog();
+            }
         }
 
         private void btnStozek_Click(object sender, RoutedEventArgs e)
         {
-            Stozek s = new Stozek("Stozek1",100, 100, double.Parse(txtWysokosc.Text), double.Parse(txtPromien.Text));
-            var Okno = new OknoWyjsciowe(s.ToString());
-            Okno.lblPole.Visibility = Visibility.Hidden;
-            Okno.ShowDialog();
+            if (double.Parse(txtPromien.Text) < 0) { MessageBox.Show("Bledna wartosc promienia stozka"); }
+            else if (double.Parse(txtWysokosc.Text) < 0) { MessageBox.Show("Bledna wartosc wysokosci stozka"); }
+            else
+            {
+                Stozek s = new Stozek("Stozek1", 100, 100, double.Parse(txtWysokosc.Text), double.Parse(txtPromien.Text));
+                var Okno = new OknoWyjsciowe(s.ToString());
+                Okno.lblPole.Visibility = Visibility.Hidden;
+                Okno.ShowDialog();
+            }
 
         }
 
         private void btnKula_Click(object sender, RoutedEventArgs e)
         {
-            Kula k = new Kula("Kula1", 100, 100, double.Parse(txtPromien.Text));
-            var Okno = new OknoWyjsciowe(k.ToString());
-            Okno.lblPole.Visibility = Visibility.Hidden;
-            Okno.ShowDialog();
+            if (double.Parse(txtPromien.Text) < 0) { MessageBox.Show("Bledna wartosc promienia kuli"); }
+            else
+            {
+                Kula k = new Kula("Kula1", 100, 100, double.Parse(txtPromien.Text));
+                var Okno = new OknoWyjsciowe(k.ToString());
+                Okno.lblPole.Visibility = Visibility.Hidden;
+                Okno.ShowDialog();
+            }
         }
     }
 }

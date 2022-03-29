@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="OknoWejsciowe" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnKoniec" Content="OK" HorizontalAlignment="Left" Margin="565,252,0,0" VerticalAlignment="Top" Click="btnKoniec_Click"/>
+        <Button x:Name="btnKoniec" Content="OK" HorizontalAlignment="Left" Margin="597,252,0,0" VerticalAlignment="Top" Click="btnKoniec_Click"/>
         <TextBox x:Name="txtSzer" HorizontalAlignment="Left" Margin="181,146,0,0" TextWrapping="Wrap" Text="Szerokosc" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtWysokosc" HorizontalAlignment="Left" Margin="181,186,0,0" TextWrapping="Wrap" Text="Wysokosc" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtPromien" HorizontalAlignment="Left" Margin="181,231,0,0" TextWrapping="Wrap" Text="Promien" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="btnStozek" Content="Stozek" HorizontalAlignment="Left" Margin="585,155,0,0" VerticalAlignment="Top" Click="btnStozek_Click"/>
+        <Button x:Name="btnStozek" Content="Stozek" HorizontalAlignment="Left" Margin="588,155,0,0" VerticalAlignment="Top" Click="btnStozek_Click"/>
         <Button x:Name="btnKula" Content="KULA" HorizontalAlignment="Left" Margin="591,204,0,0" VerticalAlignment="Top" Click="btnKula_Click"/>
 
     </Grid>

@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace Lab4
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoWyjsciowe.xaml
-    /// </summary>
+
     public partial class OknoWyjsciowe : Window
     {
         public OknoWyjsciowe(double szerokosc, double wysokosc)

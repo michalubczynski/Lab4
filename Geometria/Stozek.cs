@@ -16,9 +16,8 @@ namespace Geometria
         Wysokosc=wysokosc;
         Promien=promien;
         }
-        public override double ObliczObjetosc() {
-            return 1.0 / 3.0 * Math.PI*Wysokosc*Promien*Promien;
-        }
+        //public override double ObliczObjetosc() {return 1.0 / 3.0 * Math.PI*Wysokosc*Promien*Promien;}
+        public override double ObliczonaObjetosc { get => 1.0 / 3.0 * Math.PI * Wysokosc * Promien * Promien;}
     }
 }
     
