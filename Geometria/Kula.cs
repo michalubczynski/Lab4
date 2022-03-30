@@ -18,5 +18,25 @@ namespace Geometria
         }
         public override string PobierzIdentyfikator() { return base.PobierzIdentyfikator()+Promien; }
 
+        public static Kula operator +(Kula a, Kula b) {
+            double sumaobj = a.ObliczonaObjetosc + b.ObliczonaObjetosc;
+            double r_dopasowaneDo_V = Math.Pow((3*sumaobj)/(4*Math.PI),1.0/3.0);
+            Kula zwrotna = new Kula("Sumowana Kula",100 ,5, r_dopasowaneDo_V);
+            return zwrotna;
+        }
+        public static Kula operator -(Kula a, Kula b)
+        {
+            double sumaobj = a.ObliczonaObjetosc - b.ObliczonaObjetosc;
+            double r_dopasowaneDo_V = Math.Pow((3 * sumaobj) / (4 * Math.PI), 1.0 / 3.0);
+            Kula zwrotna = new Kula("Sumowana Kula", 100, 5, r_dopasowaneDo_V);
+            return zwrotna;
+        }
+        public static Kula operator ++(Kula a) {
+            double sumaobj = a.ObliczonaObjetosc + 1;
+            double r_dopasowaneDo_V = Math.Pow((3 * sumaobj) / (4 * Math.PI), 1.0 / 3.0);
+            Kula zwrotna = new Kula(a.Nazwa,a.Gestosc, a.CenaZaKg, r_dopasowaneDo_V);
+            return zwrotna;
+        }
+
     }
 }

@@ -38,8 +38,9 @@ namespace Lab4
             Student student2 = new Student("Majkel", "Ezordan");
             List<object> l= new List<object>();
             Kula kula = new Kula("Kuleczka",10,20,30);
+            Kula kula2 = new Kula("Kuleczka2", 10, 20, 30);
             Stozek st2 = new Stozek("St",21,31,41,51);
-            l.Add(kula);
+            l.Add(kula+kula2);
             l.Add(st2);
             l.Add(student);
             l.Add(student2);
