@@ -34,14 +34,17 @@ namespace Lab4
 
         private void btnKoniec_Click(object sender, RoutedEventArgs e)
         {
-            Student student = new Student("majkel","dzordan");
+            Student student = new Student("Majkel","Dzordan");
+            Student student2 = new Student("Majkel", "Ezordan");
             List<object> l= new List<object>();
             Kula kula = new Kula("Kuleczka",10,20,30);
             Stozek st2 = new Stozek("St",21,31,41,51);
             l.Add(kula);
             l.Add(st2);
             l.Add(student);
-            MessageBox.Show(student.PobierzIdentyfikator());
+            l.Add(student2);
+
+            l.Sort();
                 var Okno = new OknoWyjsciowe(l);
                 Okno.ShowDialog();
             

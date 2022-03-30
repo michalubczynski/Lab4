@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace Geometria
 {
-    public interface IWyswietl
+    public interface IWyswietl: IComparable
     {
         string PobierzIdentyfikator();
     }
@@ -34,6 +34,15 @@ namespace Geometria
             Gestosc = g;
             CenaZaKg = c;
             ++identyfikator;
+        }
+
+        public int CompareTo(object other) {
+
+            if (other is Student){ return 1; }
+            Bryla figura = other as Bryla;
+            if (other is Bryla && this.ObliczonaObjetosc > figura.ObliczonaObjetosc ) return 1;
+            else if (other is Bryla && this.ObliczonaObjetosc < figura.ObliczonaObjetosc) return -1;
+            else { return 0; }
         }
 
         public virtual string PobierzIdentyfikator() { return identyfikator.ToString() + Nazwa ; }

@@ -22,6 +22,15 @@ namespace Geometria
         {
             return PobierzIdentyfikator();
         }
+        public int CompareTo(object other)
+        {
+
+            if (other is Bryla) { return -1; }
+            Student debi = other as Student;
+            if ( this.Nazwisko[0] > debi.Nazwisko[0]) return 1;
+            else if (this.Nazwisko[0] < debi.Nazwisko[0]) return -1;
+            else { return 0; }
+        }
 
     }
 }
